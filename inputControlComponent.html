@@ -1,0 +1,29 @@
+<template>
+    <div>
+        <b><u>Customer Registration Form</u></b><br/><br/>
+        <lightning-input type="text" label="Enter First Name" placeholder="First Name" name="fName" required="true"></lightning-input>
+        <lightning-input type="text" label="Enter Last Name" placeholder="Last Name" name="lName" required="true"></lightning-input>
+        <lightning-input type="text" label="Enter Contact Address" placeholder="Mailing Address" max-length="200"></lightning-input>
+        <lightning-input type="text" label="Enter City Name" placeholder="City Name" name="city"></lightning-input>
+        <lightning-input type="text" label="Enter Postal Code" placeholder="Zip Code" name="zipCode"></lightning-input>
+        <lightning-input type="number" label="Enter Customer Age" placeholder="Customer Age" min="20" max="70"></lightning-input>
+        <lightning-input type="email" label="Enter Email Address" placeholder="Email Id" required="true"></lightning-input>
+        <lightning-input type="tel" label="Enter Contact Number" placeholder="Phone Number" pattern="[+91]{3}[0-9]{10}"></lightning-input>
+        <lightning-input type="text" label="Enter Company Name" placeholder="Company Name" name="company" max-length="50"></lightning-input>
+        <lightning-input type="text" label="Enter User ID" placeholder="User ID" name="userID" max-length="30" required="true"></lightning-input>
+        <lightning-input type="password" label="Enter Password" placeholder="Enter Password" name="pass" max-length="15" required="true"></lightning-input>
+        <lightning-input type="password" label="Confirm Password" placeholder="Confirm Password" name="cPass" max-length="15" required="true"></lightning-input>
+        <lightning-input type="checkbox" label="Join Our Mailing List" name="joinList" checked="false"></lightning-input>
+        <lightning-input type="url" label="Enter Website Name" placeholder="Enter Website" name="website"></lightning-input>
+        <lightning-input type="toggle" label="Send Updates" name="updates" checked="true"></lightning-input>
+        <lightning-input type="date" label="Date Of Birth" placeholder="Enter Date Of Birth" name="dob"></lightning-input>
+        <lightning-input type="file" label="Select the Profile" required="true" multiple="true" accept=".pdf, .doc"></lightning-input>
+        <lightning-input type="color" label="Select the Color" name="color"></lightning-input>
+        <lightning-input type="checkbox-button" label="Follow the News Letter" title="Follow News Letter" checked="true"></lightning-input>
+
+        <p align="center">
+            <lightning-button variant="brand" label="Save Record" name="saveRecord"></lightning-button>
+        </p>
+
+    </div>
+</template>

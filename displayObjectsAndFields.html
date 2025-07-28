@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Custom Report Builder" icon-name="standard:report">      
+        <p class="slds-var-m-around_small"><b>Select an Object from the dropdown:</b></p>     
+        <lightning-combobox 
+            name="progress"
+            label="Object Name"
+            value={value}
+            placeholder="Select Object"
+            class="slds-var-m-around_small"
+            options={statusOptions}
+            onchange={handleChange}
+            required
+            >
+        </lightning-combobox>
+        
+        <p class="slds-var-m-around_small"><b>Select the Fields of: {value}</b></p>
+            <div style="height: 230px;" class="slds-var-m-around_small">
+            <lightning-datatable 
+                key-field="id"
+                data={tableData}
+                onrowselection={handleRowAction}
+                columns={columns}>
+            </lightning-datatable>
+        </div> 
+    
+        <lightning-button variant="brand" label="Retrieve Records" 
+                title="Retrieve Records" onclick={handleClick} 
+                class="slds-m-left_medium">
+        </lightning-button>
+        <lightning-button variant="brand" label="Reset" 
+                title="Reset" onclick={handleResetClick} 
+                class="slds-m-left_medium">
+        </lightning-button>
+    
+    </lightning-card>
+</template>

@@ -1,0 +1,47 @@
+<!--<template>
+    <lightning-datatable
+        data={data}
+        columns={columns}
+        key-field="id">
+    </lightning-datatable>
+</template>-->
+
+<template>        
+    <lightning-card title = "Search Accounts" icon-name = "custom:custom63">    
+        <div class = "slds-m-around_medium">    
+            <lightning-input type = "search" onchange = {handleKeyChange} class = "slds-m-bottom_small" label = "Search" >  
+            </lightning-input>    
+            <template if:true = {accounts}>                    
+                <div style="height: 300px;">    
+                    <lightning-datatable key-field="Id"  
+                                         data={accounts}  
+                                         columns={columns}  
+                                         hide-checkbox-column="true"  
+                                         show-row-number-column="true"  
+                                         onrowaction={callRowAction}>  
+                    </lightning-datatable>    
+                </div>  
+            </template>        
+            <template if:true = {error}>    
+                {error}>                    
+            </template>    
+        </div>    
+    </lightning-card>    
+</template>
+
+
+<!--<template>
+    <lightning-card title="Search Accounts" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search"></lightning-input>
+            <template if:true={accounts}>
+                <div style="height: 300px;">
+                    <lightning-datatable key-field="Id" data={accounts} columns={columns} hide-checkbox-column="true" show-row-number-column="true" onrowaction={callRowAction}></lightning-datatable>
+                </div>
+            </template>
+            <template if:true={error}>
+                {error}
+            </template>
+        </div>
+    </lightning-card>
+</template>-->

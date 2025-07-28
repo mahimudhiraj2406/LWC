@@ -1,0 +1,30 @@
+<template>
+    <template if:true={data}>
+        <h3>Order №:{data.OrderNumber}. {data.Message}</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>External Id</th>
+                    <th>Product Name</th>
+                    <th>Family</th>
+                    <th>SKU</th>
+                    <th>Order Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={data.OrderItems} for:item="item">
+                    <tr key={item.ExternalOrderId}>
+                        <td>{item.ExternalOrderId}</td>
+                        <td>{item.Name}</td>
+                        <td>{item.Family}</td>
+                        <td>{item.SKU}</td>
+                        <td>
+                           <lightning-formatted-date-time value={item.OrderDate}>
+                           </lightning-formatted-date-time>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </template>
+</template>

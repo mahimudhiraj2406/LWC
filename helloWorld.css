@@ -1,0 +1,11 @@
+.greetingClass{
+    color: red;
+}
+
+div{
+    border: 3px solid blueviolet;
+}
+
+:host{
+    border: 4px solid brown;
+}

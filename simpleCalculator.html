@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="SimpleCalculator" icon-name="standard:formula">
+        <lightning-layout multiple-rows>
+           <lightning-layout-item size="12" padding="around-medium">
+            <lightning-input type="number" name="FirstNumber" onchange={numberChangeHandler}></lightning-input>
+           </lightning-layout-item> 
+           <lightning-layout-item size="12" padding="around-medium">
+            <lightning-input type="number" name="SecondNumber" onchange={numberChangeHandler}></lightning-input>
+           </lightning-layout-item> 
+           <lightning-layout-item size="12" padding="around-medium">
+            <lightning-button-group>
+                <lightning-button label="Add" icon-name="utility:add" icon-position="right" onclick={addHandler}></lightning-button>
+                <lightning-button label="Subtract" icon-name="utility:dash" icon-position="right" onclick={subHandler}></lightning-button>
+                <lightning-button label="Multiply" icon-name="utility:close" icon-position="right" onclick={mulHandler}></lightning-button>
+                <lightning-button label="Divide" icon-name="utility:magicwand" icon-position="right" onclick={divHandler}></lightning-button>
+            </lightning-button-group>
+           </lightning-layout-item> 
+           <lightning-layout-item size="12" padding="around-medium">
+            <lightning-formatted-text value={currentResult}></lightning-formatted-text>
+           </lightning-layout-item> 
+           <lightning-layout-item size="12" padding="around-medium">
+            <lightning-input type="checkbox" label="Show Previous Results" onchange={showPreviousResultToggle}></lightning-input>
+           </lightning-layout-item>
+           <lightning-layout-item size="12" padding="around-medium">
+            <template if:true={showPreviousResult}>
+                <ul>
+                    <template for:each={previousResult} for:item="result">
+                        <li key={result}>
+                            <lightning-formatted-text value={result}></lightning-formatted-text>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+           </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

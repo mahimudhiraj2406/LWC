@@ -1,0 +1,44 @@
+<!--
+<template>
+    <lightning-card title="Feedback Analytics" icon-name="standard:form">
+        <div class="slds-m-around_medium">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="4">
+                    <lightning-formatted-number value={averageRating} format-style="decimal" maximum-fraction-digits="2" label="Average Rating"></lightning-formatted-number>
+                </lightning-layout-item>
+                <lightning-layout-item size="4">
+                    <lightning-formatted-number value={totalFeedbackCount} label="Total Feedback Submissions"></lightning-formatted-number>
+                </lightning-layout-item>
+            </lightning-layout>
+
+            <div>
+                <canvas lwc:dom="manual" class="chart" style="width:100%; max-width:700px;"></canvas>
+            </div>
+        </div>
+    </lightning-card>
+</template>
+-->
+
+<!-- <template>
+    <lightning-card title="Feedback Ratings" icon-name="utility:chart">
+        <div class="slds-p-around_small slds-grid slds-grid--vertical-align-center slds-grid--align-center">
+            <canvas class="barChart" lwc:dom="manual"></canvas>
+            <div if:false={isChartJsInitialized} class="slds-col--padded slds-size--1-of-1">
+                <lightning-spinner alternative-text="Loading" size="medium" variant="base"></lightning-spinner>
+            </div>
+        </div>
+    </lightning-card>
+</template> -->
+
+
+<template>
+    <lightning-card title="Feedback Donut Chart" icon-name="standard:chart">
+        <div class="slds-p-around_medium">
+            <canvas class="donutChart"></canvas>
+        </div>
+    </lightning-card>
+</template>
+
+
+
+

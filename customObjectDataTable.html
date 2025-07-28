@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Account Data Table" icon-name="standard:account">
+        <lightning-datatable
+            key-field="Id"
+            data={accounts}
+            columns={columns}
+            onrowaction={handleRowAction}
+        >
+        </lightning-datatable>
+        <lightning-button label="Submit" onclick={handleSubmit} variant="brand"></lightning-button>
+    </lightning-card>
+</template>

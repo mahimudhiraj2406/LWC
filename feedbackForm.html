@@ -1,0 +1,137 @@
+<!-- <template>
+    <lightning-card title="Feedback Form" icon-name="standard:form">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+                type="text" 
+                label="Name" 
+                value={name} 
+                onchange={handleInputChange} 
+                data-id="name" 
+                required 
+                class="slds-var-m-bottom_medium">
+            </lightning-input>
+            <lightning-input 
+                type="tel" 
+                label="Contact Number" 
+                value={contactNumber} 
+                onchange={handleInputChange} 
+                data-id="contactNumber" 
+                required 
+                class="slds-var-m-bottom_medium">
+            </lightning-input>
+            <lightning-input 
+                type="email" 
+                label="Email" 
+                value={email} 
+                onchange={handleInputChange} 
+                data-id="email" 
+                required 
+                class="slds-var-m-bottom_medium">
+            </lightning-input>
+
+            <div class="rating-container">
+                <label>Rating</label>
+                <div class="stars">
+                    <template for:each={stars} for:item="star">
+                        <span 
+                            key={star.value} 
+                            data-value={star.value} 
+                            onclick={handleRatingClick} 
+                            onmouseover={handleHover} 
+                            onmouseout={handleHoverOut} 
+                            style="color: #d3d3d3; font-size: 32px; margin-right: 3px; cursor: pointer;">
+                            ★
+                        </span>
+                    </template>
+                </div>
+                <p class="rating-error slds-text-color_error slds-hide">Rating is required.</p>
+            </div>
+
+            <lightning-textarea 
+                label="Comments" 
+                value={comments} 
+                onchange={handleInputChange} 
+                data-id="comments" 
+                class="slds-var-m-bottom_medium">
+            </lightning-textarea>
+            <lightning-button 
+                variant="brand" 
+                label="Submit" 
+                onclick={handleSubmit} 
+                class="slds-var-m-top_medium">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template> -->
+
+
+
+<template>
+    <lightning-card title="Feedback Form" icon-name="standard:form">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+                type="text" 
+                label="Name" 
+                value={name} 
+                onchange={handleInputChange} 
+                data-id="name" 
+                required 
+                class="slds-var-m-bottom_medium">
+            </lightning-input>
+            <lightning-input 
+                type="tel" 
+                label="Contact Number" 
+                value={contactNumber} 
+                onchange={handleInputChange} 
+                data-id="contactNumber" 
+                required 
+                class="slds-var-m-bottom_medium">
+            </lightning-input>
+            <lightning-input 
+                type="email" 
+                label="Email" 
+                value={email} 
+                onchange={handleInputChange} 
+                data-id="email" 
+                required 
+                class="slds-var-m-bottom_medium">
+            </lightning-input>
+
+            <div class="rating-container">
+                <label>Rating</label>
+                <div class="stars">
+                    <template for:each={stars} for:item="star">
+                        <span 
+                            key={star.value} 
+                            data-value={star.value} 
+                            onclick={handleRatingClick} 
+                            onmouseover={handleHover} 
+                            onmouseout={handleHoverOut} 
+                            style="color: #d3d3d3; font-size: 32px; margin-right: 3px; cursor: pointer;">
+                            ★
+                        </span>
+                    </template>
+                </div>
+                <p class="rating-error slds-text-color_error slds-hide">Rating is required.</p>
+            </div>
+
+            <lightning-textarea 
+                label="Comments" 
+                value={comments} 
+                onchange={handleInputChange} 
+                data-id="comments" 
+                class="slds-var-m-bottom_medium">
+            </lightning-textarea>
+            <lightning-button 
+                variant="brand" 
+                label="Submit" 
+                onclick={handleSubmit} 
+                class="slds-var-m-top_medium">
+            </lightning-button>
+            <lightning-button label="Feedback Dashboard"
+                title="Feedback Dashboard" onclick={navitageToLWCUsingAura} variant="brand" class="slds-var-m-left_medium">
+            </lightning-button>
+            {label}
+        </div>
+    </lightning-card>
+</template>

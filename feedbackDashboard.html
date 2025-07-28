@@ -1,0 +1,62 @@
+<!-- <template>
+    <lightning-card title="Feedback Dashboard" icon-name="action:record">
+    
+
+        <lightning-input
+        name="ratingFilter"
+        label="Filter by Rating"
+        value={ratingFilter}
+        placeholder="Enter a Rating"
+        class="slds-var-m-around_medium"
+        onchange={handleRatingFilterChange}>
+    </lightning-input>
+
+        
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                onsort={handleSort}
+                sorted-by={sortBy}
+                sorted-direction={sortDirection}>
+        </lightning-datatable>
+        
+</lightning-card>
+</template> -->
+
+
+
+<template>
+    <lightning-card title="Feedback Dashboard" icon-name="action:record" class="slds-m-right_xx-large">
+    <!--<div>-->
+
+        <lightning-input
+        name="ratingFilter"
+        label="Filter by Rating"
+        value={ratingFilter}
+        placeholder="Enter a Rating"
+        class="slds-var-m-around_medium"
+        onchange={handleRatingFilterChange}>
+    </lightning-input>
+
+        <!-- sldsValidatorIgnoreNextLine -->
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                onsort={handleSort}
+                sorted-by={sortBy}
+                sorted-direction={sortDirection}>
+        </lightning-datatable>
+
+        <div class="slds-card slds-var-p-around_small">
+            {label}
+        </div>
+
+        <lightning-button label="Feedback Analytics"
+                title="Feedback Analytics" onclick={navitageToLWCUsingAura} variant="brand" class="slds-var-m-left_medium">
+            </lightning-button>
+        
+   <!-- </div>-->
+</lightning-card>
+</template>

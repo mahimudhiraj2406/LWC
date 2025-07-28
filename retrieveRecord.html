@@ -1,0 +1,176 @@
+<!-- <template>    
+    <div class="c-container">       
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <c-display-objects-and-fields onretreive={retriveRecordHandler} 
+                                                onreset={resetHandler}>
+                </c-display-objects-and-fields>
+            </lightning-layout-item>
+            <template if:true={isRecordsVisible}>
+                <lightning-card class="slds-var-m-around_small" title="Data Fetching and Visualization" icon-name="standard:insights">
+                    <p class="slds-var-m-around_medium"><b>{objectName} Records based on field selection </b></p>
+
+                    <div style="--slds-c-button-success-text-color: #ffffff; --slds-c-button-destructive-color-background: #e70101; --slds-c-button-success-color-background: #01ca30;" class="slds-var-m-around_small">
+                        <lightning-button variant="brand-outline" label="Add Filter" icon-name="utility:filterList" onclick={handleAddFilter} class="slds-var-m-left_large"></lightning-button>
+                        <lightning-button variant="brand" label="Save Report" icon-name="utility:save" onclick={handleSaveReport} class="slds-var-m-left_large"></lightning-button>
+                        <lightning-button variant="destructive" label="Download PDF" icon-name="utility:download" onclick={handleDownloadPDF} class="slds-var-m-left_large"></lightning-button>
+                        <lightning-button variant="success" label="Download CSV" icon-name="utility:download" onclick={handleDownloadCSV} class="slds-var-m-left_large"></lightning-button>
+                    </div>
+                    
+                    <template for:each={filters} for:item="filter">
+                        <div key={filter.id} class="slds-grid slds-gutters">
+                            <div class="slds-var-m-left_large slds-col slds-size_1-of-4">
+                                <lightning-combobox
+                                    placeholder="Select Field"
+                                    value={filter.field}
+                                    options={fieldOptions}
+                                    onchange={handleFilterFieldChange}
+                                    data-id={filter.id}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning-combobox
+                                    placeholder="Select Operator"
+                                    value={filter.operator}
+                                    options={operatorOptions}
+                                    onchange={handleFilterOperatorChange}
+                                    data-id={filter.id}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning-input
+                                    type="text"
+                                    placeholder="Value"
+                                    value={filter.value}
+                                    onchange={handleFilterValueChange}
+                                    data-id={filter.id}>
+                                </lightning-input>
+                            </div>
+                            <div class="slds-var-m-top_medium slds-col slds-size_1-of-12">
+                                <lightning-button-icon
+                                    icon-name="utility:close"
+                                    alternative-text="Remove"
+                                    onclick={handleRemoveFilter}
+                                    data-id={filter.id}>
+                                </lightning-button-icon>
+                            </div>
+                        </div>
+                    </template>
+                    
+                    <div style="height: 320px; width: 635px;" class="slds-var-m-around_small">
+                        <lightning-datatable 
+                            key-field="id"
+                            data={filteredData}
+                            columns={columns}
+                            sorted-by={sortedBy}
+                            sorted-direction={sortedDirection}
+                            onsort={handleSort}
+                            min-column-width=200>
+                        </lightning-datatable>                                                
+                    </div>
+                </lightning-card>
+            </template> 
+        </lightning-layout>              
+    </div>    
+</template> -->
+
+
+
+
+<template>    
+    <div class="c-container">       
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <c-display-objects-and-fields onretreive={retriveRecordHandler} 
+                                                onreset={resetHandler}>
+                </c-display-objects-and-fields>
+            </lightning-layout-item>
+            <template if:true={isRecordsVisible}>
+                <lightning-card class="slds-var-m-around_small" title="Data Fetching and Visualization" icon-name="standard:insights">
+                    <p class="slds-var-m-around_medium"><b>{objectName} Records based on field selection </b></p>
+
+                    <div style="--slds-c-button-success-text-color: #ffffff; --slds-c-button-destructive-color-background: #e70101; --slds-c-button-success-color-background: #01ca30;" class="slds-var-m-around_small">
+                        <lightning-button variant="brand-outline" label="Add Filter" icon-name="utility:filterList" onclick={handleAddFilter} class="slds-var-m-left_large"></lightning-button>
+                        <lightning-button variant="brand" label="Save Report" icon-name="utility:save" onclick={handleSaveReport} class="slds-var-m-left_large"></lightning-button>
+                        <lightning-button variant="destructive" label="Download PDF" icon-name="utility:download" onclick={handleDownloadPDF} class="slds-var-m-left_large"></lightning-button>
+                        <lightning-button variant="success" label="Download CSV" icon-name="utility:download" onclick={handleDownloadCSV} class="slds-var-m-left_large"></lightning-button>
+                    </div>
+                    
+                    <template for:each={filters} for:item="filter">
+                        <div key={filter.id} class="slds-grid slds-gutters">
+                            <div class="slds-var-m-left_large slds-col slds-size_1-of-4">
+                                <lightning-combobox
+                                    placeholder="Select Field"
+                                    value={filter.field}
+                                    options={fieldOptions}
+                                    onchange={handleFilterFieldChange}
+                                    data-id={filter.id}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                <lightning-combobox
+                                    placeholder="Select Operator"
+                                    value={filter.operator}
+                                    options={operatorOptions}
+                                    onchange={handleFilterOperatorChange}
+                                    data-id={filter.id}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning-input
+                                    type="text"
+                                    placeholder="Value"
+                                    value={filter.value}
+                                    onchange={handleFilterValueChange}
+                                    data-id={filter.id}>
+                                </lightning-input>
+                            </div>
+                            <div class="slds-var-m-top_medium slds-col slds-size_1-of-12">
+                                <lightning-button-icon
+                                    icon-name="utility:close"
+                                    alternative-text="Remove"
+                                    onclick={handleRemoveFilter}
+                                    data-id={filter.id}>
+                                </lightning-button-icon>
+                            </div>
+                        </div>
+                    </template>
+                    
+                    <div style="height: 320px; width: 635px;" class="slds-var-m-around_small">
+                        <lightning-datatable 
+                            key-field="id"
+                            data={filteredData}
+                            columns={columns}
+                            sorted-by={sortedBy}
+                            sorted-direction={sortedDirection}
+                            onsort={handleSort}
+                            min-column-width=200>
+                        </lightning-datatable>                                                
+                    </div>
+
+                    <div class="slds-var-m-around_medium">
+                        <lightning-input 
+                label="Email Address" 
+                value={email} 
+                onchange={handleEmailChange}>
+            </lightning-input>
+
+            <lightning-combobox 
+                label="Schedule Frequency" 
+                value={scheduleFrequency} 
+                options={scheduleOptions} 
+                onchange={handleScheduleFrequencyChange}>
+            </lightning-combobox>
+            <br>
+            <lightning-button 
+                variant="brand"
+                label="Schedule Report" 
+                onclick={handleScheduleReport}
+               >
+            </lightning-button>
+            </div>
+                </lightning-card>
+            </template> 
+        </lightning-layout>              
+    </div>    
+</template>

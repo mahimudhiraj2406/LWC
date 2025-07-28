@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Feedback Analytics" icon-name="standard:lightning_usage">
+        <template if:true={chartConfiguration}>
+            <c-feedback-analytics-child chart-config={chartConfiguration}></c-feedback-analytics-child>
+            <div style="margin: 1rem;">
+                <p style="font-weight: bold;">Total Feedbacks Submitted: {totalRecords}</p>
+                <p style="font-weight: bold;">Average Rating: {averageRating}</p>
+                <br/>
+                {label}
+
+                <lightning-button label="Feedback Form"
+                title="Feedback Form" onclick={navitageToLWCUsingAura} variant="brand" class="slds-var-m-left_medium">
+            </lightning-button>
+            </div>
+        </template>
+</lightning-card>
+</template>
