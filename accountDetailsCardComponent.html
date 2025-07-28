@@ -1,0 +1,52 @@
+<template>
+    <div>
+        <lightning-card icon-name="standard:account" footer="CopyRights Reserved by Mahesh">
+            <div slot="title">
+                Account <br/>
+                <b>Mahesh</b>
+            </div>
+
+            <div slot="actions">
+                <lightning-button label="Follow" icon-name="utility:add"></lightning-button> &nbsp;&nbsp;
+                <lightning-button-group>
+                    <lightning-button label="New Contact" variant="neutral"></lightning-button>
+                    <lightning-button label="New Case" variant="neutral"></lightning-button>
+                    <lightning-button label="New Note" variant="neutral"></lightning-button>
+                    <lightning-button-menu alternative-text="Select the Menu Item" menu-alignment="auto">
+                        <lightning-menu-item label="New Opportunity" value="oppty"></lightning-menu-item>
+                        <lightning-menu-item label="Change Owner" value="ChangeOwner"></lightning-menu-item>
+                        <lightning-menu-item label="Edit" value="edit"></lightning-menu-item>
+                        <lightning-menu-item label="Delete" value="delete"></lightning-menu-item>
+                    </lightning-button-menu>
+                </lightning-button-group>
+            </div>
+
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Account Name</th>
+                            <th>Rating</th>
+                            <th>Industry Name</th>
+                            <th>Annual Revenue</th>
+                            <th>Phone Number</th>
+                            <th>Fax Number</th>
+                            <th>Customer Priority</th>
+                            <th>Active Status</th>
+                        </tr>
+                        <tr>
+                            <td>Mahesh</td>
+                            <td>Hot</td>
+                            <td>Manufacturing</td>
+                            <td>$1000000</td>
+                            <td>1234567890</td>
+                            <td>1234567890</td>
+                            <td>High</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </lightning-card>
+    </div>   
+</template>
